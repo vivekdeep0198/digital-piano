@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Piano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <header>
+      <div class="logo">DP</div>
+      <div>
+        <h1>Digital Piano</h1>
+        <p class="lead">Play notes by clicking keys or using your keyboard.</p>
+      </div>
+    </header>
+
+    <section class="controls-row">
+      <div class="controls-left">
+        <button id="octDown" class="small-btn">Octave −</button>
+        <div id="octaveLabel" class="muted">Octave: 4</div>
+        <button id="octUp" class="small-btn">Octave +</button>
+      </div>
+
+      <div class="controls-right">
+        <label class="small">Wave:
+          <select id="waveSelect">
+            <option value="sine">sine</option>
+            <option value="triangle">triangle</option>
+            <option value="sawtooth">sawtooth</option>
+            <option value="square">square</option>
+          </select>
+        </label>
+
+        <label class="small">Volume:
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.4">
+        </label>
+      </div>
+    </section>
+
+    <section class="piano" id="piano" aria-label="Digital piano"></section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
